@@ -5,4 +5,5 @@
 	<h3><%= item.complete %></h3>
 	<%= link_to 'Show Item', item_path(item) %>
 	<%= link_to 'Edit Item', edit_item_path(item) %>
+	<%= link_to 'Delete Item', item, method: :delete %>
 <% end %>

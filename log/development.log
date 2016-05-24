@@ -436,3 +436,132 @@ Processing by StaticPagesController#home as HTML
   Rendered static_pages/home.html.erb within layouts/application (0.0ms)
   Rendered layouts/_navbar.html.erb (0.4ms)
 Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-05-24 15:15:05 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_navbar.html.erb (1.3ms)
+Completed 200 OK in 404ms (Views: 394.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-05-24 15:15:09 -0600
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 28ms (Views: 27.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for ::1 at 2016-05-24 15:15:09 -0600
+Processing by StaticPagesController#about as HTML
+  Rendered static_pages/about.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navbar.html.erb (0.2ms)
+Completed 200 OK in 37ms (Views: 36.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/items" for ::1 at 2016-05-24 15:15:10 -0600
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.6ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application (11.5ms)
+  Rendered layouts/_navbar.html.erb (0.2ms)
+Completed 200 OK in 39ms (Views: 30.4ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/about" for ::1 at 2016-05-24 15:15:12 -0600
+Processing by StaticPagesController#about as HTML
+  Rendered static_pages/about.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+Completed 200 OK in 21ms (Views: 20.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-05-24 15:15:12 -0600
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_navbar.html.erb (0.2ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/items" for ::1 at 2016-05-24 15:15:13 -0600
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_navbar.html.erb (0.2ms)
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/items/new" for ::1 at 2016-05-24 15:15:18 -0600
+Processing by ItemsController#new as HTML
+  Rendered items/new.html.erb within layouts/application (29.7ms)
+  Rendered layouts/_navbar.html.erb (0.2ms)
+Completed 200 OK in 52ms (Views: 51.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/items" for ::1 at 2016-05-24 15:15:32 -0600
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pTkCUnDxuCfqRMMfMbmLX0WQEzrhlI6BdayozVfYTMfbuAfkBrlGT4kYl9UsnKvQY0q64WsaCTY0WJrGtrg2dw==", "item"=>{"name"=>"Buy Groceries", "description"=>"Go to Smith's, get some snacks"}, "commit"=>"Create Item"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "items" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Buy Groceries"], ["description", "Go to Smith's, get some snacks"], ["created_at", "2016-05-24 21:15:32.473191"], ["updated_at", "2016-05-24 21:15:32.473191"]]
+  [1m[35m (1.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/items
+Completed 302 Found in 12ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/items" for ::1 at 2016-05-24 15:15:32 -0600
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.6ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+Completed 200 OK in 46ms (Views: 44.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/items" for ::1 at 2016-05-24 15:15:37 -0600
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_navbar.html.erb (0.2ms)
+Completed 200 OK in 27ms (Views: 25.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/items/new" for ::1 at 2016-05-24 15:15:43 -0600
+Processing by ItemsController#new as HTML
+  Rendered items/new.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_navbar.html.erb (0.2ms)
+Completed 200 OK in 25ms (Views: 24.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/items" for ::1 at 2016-05-24 15:16:02 -0600
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bez1cn+bHcMAqsn41ekHCP75zLy9dVeUuwgIvO3eC4R7bfDECdPjq2P2nTLIzCeH2CNlZzf70CP6/Dq3DL5xNA==", "item"=>{"name"=>"Walk the Dog", "description"=>"Take Air Bud to the park and shoot some hoops"}, "commit"=>"Create Item"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["name", "Walk the Dog"], ["description", "Take Air Bud to the park and shoot some hoops"], ["created_at", "2016-05-24 21:16:02.233173"], ["updated_at", "2016-05-24 21:16:02.233173"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/items
+Completed 302 Found in 4ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/items" for ::1 at 2016-05-24 15:16:02 -0600
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/items/3" for ::1 at 2016-05-24 15:16:05 -0600
+Processing by ItemsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"iI+vQLCwlL9fdW/XVxAY2ortG6FNgg/SKQbzofhn9Qr2Dqr2xvhq1zwpOx1KNThVrDeyescMiGVo8sGqGQePug==", "id"=>"3"}
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/items
+Completed 302 Found in 23ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/items" for ::1 at 2016-05-24 15:16:05 -0600
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+Completed 200 OK in 39ms (Views: 37.5ms | ActiveRecord: 0.4ms)

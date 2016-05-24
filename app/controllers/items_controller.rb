@@ -1,6 +1,7 @@
 class ItemsController < ApplicationController
   def index
-  	@items = Item.all
+	# @items = Item.all
+  	@items = Item.where(complete: false)
   end
 
   def show
@@ -12,7 +13,8 @@ class ItemsController < ApplicationController
   end
 
   def create
-	if Item.create(item_params)
+	@item = Item.create(item_params)
+	if @item.save
 		redirect_to items_path
 	else
 		render :new
@@ -38,7 +40,6 @@ class ItemsController < ApplicationController
   	@item.destroy
   	redirect_to items_path
   end
-
 
   private
 

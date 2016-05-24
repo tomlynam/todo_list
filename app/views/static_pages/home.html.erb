@@ -3,4 +3,7 @@
 <p>Welcome to the DPL To-Do List App!</p>
 <p>"A place to get stuff done."</p>
 
+<% @progress = @checked.count.to_f / @items.count.to_f %>
+<p>Current Progress: <%= @progress * 100 %>%</p>
+
 <a href="/items/new"><p>Slide Into Those To-Do's</p></a>

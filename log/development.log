@@ -327,3 +327,112 @@ Processing by ItemsController#index as HTML
   [1m[35mItem Load (0.5ms)[0m  SELECT "items".* FROM "items"
   Rendered items/index.html.erb within layouts/application (1.7ms)
 Completed 200 OK in 30ms (Views: 29.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-05-24 15:05:39 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 571ms (Views: 558.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for ::1 at 2016-05-24 15:06:13 -0600
+Processing by StaticPagesController#about as HTML
+  Rendered static_pages/about.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 40ms (Views: 38.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-05-24 15:08:12 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_navbar.html.erb (1.3ms)
+Completed 200 OK in 397ms (Views: 384.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-05-24 15:08:14 -0600
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+Completed 200 OK in 21ms (Views: 20.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for ::1 at 2016-05-24 15:08:17 -0600
+Processing by StaticPagesController#about as HTML
+  Rendered static_pages/about.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/items" for ::1 at 2016-05-24 15:08:18 -0600
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (1.0ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application (15.6ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+Completed 200 OK in 47ms (Views: 36.2ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/items" for ::1 at 2016-05-24 15:12:15 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (1.0ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application (16.8ms)
+  Rendered layouts/_navbar.html.erb (1.3ms)
+Completed 200 OK in 388ms (Views: 365.7ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/" for ::1 at 2016-05-24 15:12:17 -0600
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (1.4ms)
+Completed 200 OK in 28ms (Views: 27.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for ::1 at 2016-05-24 15:12:18 -0600
+Processing by StaticPagesController#about as HTML
+  Rendered static_pages/about.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navbar.html.erb (0.2ms)
+Completed 200 OK in 21ms (Views: 20.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/items" for ::1 at 2016-05-24 15:12:18 -0600
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_navbar.html.erb (0.2ms)
+Completed 200 OK in 24ms (Views: 23.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/items/1/edit" for ::1 at 2016-05-24 15:12:19 -0600
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mItem Load (0.5ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered items/edit.html.erb within layouts/application (28.0ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+Completed 200 OK in 71ms (Views: 47.8ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/items/1" for ::1 at 2016-05-24 15:12:24 -0600
+Processing by ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M4m3ZBICUVQAGdZQ2T9ZsOnyz8qGMAfC9VRoUQkaMk5NCLLSZEqvPGNFgprEGnk/zyhmEQy+gHW0oFpa6HpI/g==", "item"=>{"name"=>"Take Out Trash", "description"=>"Put the garbage cans out by the curb on Tuesday"}, "commit"=>"Update Item", "id"=>"1"}
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "items" SET "description" = $1, "updated_at" = $2 WHERE "items"."id" = $3[0m  [["description", "Put the garbage cans out by the curb on Tuesday"], ["updated_at", "2016-05-24 21:12:24.309779"], ["id", 1]]
+  [1m[35m (1.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/items
+Completed 302 Found in 8ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/items" for ::1 at 2016-05-24 15:12:24 -0600
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-05-24 15:12:26 -0600
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.0ms)

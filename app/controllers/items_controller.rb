@@ -1,8 +1,12 @@
 class ItemsController < ApplicationController
   def index
-	# @items = Item.all
   	@items = Item.where(complete: false)
   end
+
+  def completed
+  	@checked = Item.where(complete: true)
+  end
+
 
   def show
   	@item = Item.find(params[:id])

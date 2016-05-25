@@ -2432,3 +2432,192 @@ Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f
 
 
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-24 18:09:52 -0600
+
+
+Started GET "/items" for ::1 at 2016-05-24 18:12:40 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.7ms)[0m  SELECT "items".* FROM "items" WHERE "items"."complete" = $1  ORDER BY priority DESC  [["complete", "f"]]
+  Rendered items/index.html.erb within layouts/application (17.4ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+Completed 200 OK in 395ms (Views: 368.7ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/assets/items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-24 18:12:41 -0600
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-24 18:12:41 -0600
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-24 18:12:41 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-24 18:12:41 -0600
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-24 18:12:41 -0600
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-24 18:12:41 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-24 18:12:41 -0600
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-24 18:12:41 -0600
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-24 18:12:41 -0600
+
+
+Started GET "/items" for ::1 at 2016-05-24 18:12:42 -0600
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."complete" = $1  ORDER BY priority DESC[0m  [["complete", "f"]]
+  Rendered items/index.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_navbar.html.erb (1.4ms)
+Completed 200 OK in 71ms (Views: 68.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/items/11" for ::1 at 2016-05-24 18:12:43 -0600
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mItem Load (0.6ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1  [["id", 11]]
+  Rendered items/show.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+Completed 200 OK in 69ms (Views: 52.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/items" for ::1 at 2016-05-24 18:12:44 -0600
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."complete" = $1  ORDER BY priority DESC[0m  [["complete", "f"]]
+  Rendered items/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+Completed 200 OK in 34ms (Views: 31.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/items/12/edit" for ::1 at 2016-05-24 18:12:49 -0600
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mItem Load (0.4ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1  [["id", 12]]
+  Rendered items/edit.html.erb within layouts/application (49.1ms)
+  Rendered layouts/_navbar.html.erb (0.2ms)
+Completed 200 OK in 76ms (Views: 73.8ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/items/12" for ::1 at 2016-05-24 18:12:52 -0600
+Processing by ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"itNQE7ZNkxZriDj0kE5fhVaIwk2cv+0ivKBDVWLvAwn0UlWlwAVtfgjUbD6Na38KcFJrlhYxapX9VHFeg495uQ==", "item"=>{"name"=>"Pay taxes", "description"=>"use turbotax", "priority"=>"5", "complete"=>"0"}, "commit"=>"Update Item", "id"=>"12"}
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mUPDATE "items" SET "priority" = $1, "updated_at" = $2 WHERE "items"."id" = $3[0m  [["priority", 5], ["updated_at", "2016-05-25 00:12:52.215164"], ["id", 12]]
+  [1m[35m (1.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/items
+Completed 302 Found in 9ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/items" for ::1 at 2016-05-24 18:12:52 -0600
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."complete" = $1  ORDER BY priority DESC[0m  [["complete", "f"]]
+  Rendered items/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_navbar.html.erb (0.2ms)
+Completed 200 OK in 26ms (Views: 25.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/items" for ::1 at 2016-05-24 18:13:52 -0600
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items" WHERE "items"."complete" = $1  ORDER BY priority DESC  [["complete", "f"]]
+  Rendered items/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+Completed 200 OK in 39ms (Views: 37.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-24 18:13:52 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-24 18:13:52 -0600
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-24 18:13:52 -0600
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-24 18:13:52 -0600
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-24 18:13:52 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-24 18:13:52 -0600
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-24 18:13:52 -0600
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-24 18:13:52 -0600
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-24 18:13:52 -0600
+
+
+Started GET "/" for ::1 at 2016-05-24 18:14:27 -0600
+Processing by StaticPagesController#home as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE "items"."complete" = $1[0m  [["complete", "t"]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "items"
+  Rendered static_pages/home.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 45ms (Views: 43.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/items" for ::1 at 2016-05-24 18:14:29 -0600
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.8ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."complete" = $1  ORDER BY priority DESC[0m  [["complete", "f"]]
+  Rendered items/index.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_navbar.html.erb (0.2ms)
+Completed 200 OK in 42ms (Views: 40.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/completed" for ::1 at 2016-05-24 18:14:31 -0600
+Processing by ItemsController#completed as HTML
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items" WHERE "items"."complete" = $1  [["complete", "t"]]
+  Rendered items/completed.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+Completed 200 OK in 29ms (Views: 27.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-05-24 18:14:53 -0600
+Processing by StaticPagesController#home as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "items" WHERE "items"."complete" = $1[0m  [["complete", "t"]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "items"
+  Rendered static_pages/home.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+Completed 200 OK in 50ms (Views: 47.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/items" for ::1 at 2016-05-24 18:14:55 -0600
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."complete" = $1  ORDER BY priority DESC[0m  [["complete", "f"]]
+  Rendered items/index.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+Completed 200 OK in 50ms (Views: 48.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/completed" for ::1 at 2016-05-24 18:14:56 -0600
+Processing by ItemsController#completed as HTML
+  [1m[35mItem Load (0.6ms)[0m  SELECT "items".* FROM "items" WHERE "items"."complete" = $1  [["complete", "t"]]
+  Rendered items/completed.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 50ms (Views: 48.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/items" for ::1 at 2016-05-24 18:14:58 -0600
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."complete" = $1  ORDER BY priority DESC[0m  [["complete", "f"]]
+  Rendered items/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+Completed 200 OK in 37ms (Views: 35.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/about" for ::1 at 2016-05-24 18:15:00 -0600
+Processing by StaticPagesController#about as HTML
+  Rendered static_pages/about.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.2ms)
+Completed 200 OK in 27ms (Views: 26.5ms | ActiveRecord: 0.0ms)

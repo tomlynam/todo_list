@@ -1,7 +1,10 @@
 <h1>Item</h1>
 
-<h2><%= @item.name %></h2>
-<h3><%= @item.description %></h3>
-<h3><%= @item.priority %></h3>
-<h3><%= @item.complete %></h3>
-<%= link_to 'Back', items_path %>
+<div>
+	<h2><%= @item.name %></h2>
+	<h3><%= @item.description %></h3>
+	<h3><%= @item.priority %></h3>
+	<h3><%= @item.complete %></h3>
+</div>
+
+<p><%= link_to 'Back', items_path %></p>

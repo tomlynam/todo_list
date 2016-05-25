@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   def index
-  	@items = Item.where(complete: false)
+  	@items = Item.where(complete: false).order('priority DESC')
   end
 
   def completed
